@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        text(name: 'MANIFESTS', defaultValue: '<?xml version="1.0" encoding="UTF-8"?>
+        multi-line(name: 'MANIFESTS', defaultValue: '<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <remote name="origin" fetch="ssh://git@sdll9202.labs.teradata.com/source-code" />
 
