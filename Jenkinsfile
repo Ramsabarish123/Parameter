@@ -21,7 +21,7 @@ pipeline {
         
         stage("TEST") {
             steps {
-                  sh 'echo HELLO'
+                  echo "flag: ${params.CHANGED_PROJECTS}"
             }
         }
         
