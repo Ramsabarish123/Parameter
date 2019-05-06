@@ -15,7 +15,7 @@ pipeline {
         
         stage("BUILD") {
             steps {
-                build job: 'Build' parameters: [string(name: 'MANIFESTS', value: '${params.MANIFESTS}') , string(name: 'CHANGED_PROJECTS', value: '${params.CHANGED_PROJECTS}')]
+                build job: 'Build', parameters: [string(name: 'MANIFESTS', value: '${params.MANIFESTS}') , string(name: 'CHANGED_PROJECTS', value: '${params.CHANGED_PROJECTS}')]
             }
         }
         
