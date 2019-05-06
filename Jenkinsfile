@@ -13,9 +13,15 @@ pipeline {
 
     stages {
         
-        stage("foo") {
+        stage("BUILD") {
             steps {
-                echo "${params.MANIFESTS}"
+                build job: 'Build' parameters: [string(name: 'MANIFESTS', value: '${params.MANIFESTS}') , string(name: 'CHANGED_PROJECTS', value: '${params.CHANGED_PROJECTS}')]
+            }
+        }
+        
+        stage("TEST") {
+            steps {
+                  sh 'echo HELLO'
             }
         }
         
