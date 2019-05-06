@@ -15,7 +15,7 @@ pipeline {
         
         stage("foo") {
             steps {
-                echo "flag: ${params.MANIFESTS}"
+                echo "${params.MANIFESTS}"
             }
         }
         
