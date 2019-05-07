@@ -23,7 +23,7 @@ pipeline {
         
         stage("TEST") {
             steps {
-                  echo "flag: ${params.CHANGED_PROJECTS}"
+                  build job: 'Testing'
             }
         }
         
